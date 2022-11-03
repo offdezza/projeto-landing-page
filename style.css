@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap'); /* Selecionadas as fontes pelo Figma e depois pelo Google Fontes */
+/* 
+font-family: 'Righteous', cursive;
+font-family: 'Sarala', sans-serif; */
+
+* {         /* Serve para dar um "reset css" para anular configurações pré-definidas */ 
+    margin: 0;     /* Distância para fora do elemento */
+    padding: 0;    /* Distância para dentro do elemento */
+    box-sizing: border-box; /* Define como a largura e a altura do elemento são calculadas: se incluem o padding e as bordas ou não. */
+    text-decoration: none; /* Tira qualquer decoração que pode ter no texto */
+} 
+
+body {      
+    font-size: 100%;    /* Reset no body */
+    background: linear-gradient(68.15deg, #2F2325 16.62%, #8E5D52 85.61%);   /* Copiado do Figma */
+}
+
+.cabecalho {    /*Classes terão sempre um ponto antes do nome, tags não precisam */
+    display: flex;  /* Para usar o Flex Box */
+    flex-direction: row;    /* Alinha os itens em linha (horizontal) / A direction em "row" já é pré-definida, não é obrigatório colocar neste caso */
+    justify-content: space-around;  /* Espaçamento entre itens - neste caso, deixa um espaçamento externo (os itens do canto não tocam "parede" do site  */
+    align-items: center;    /* Alinha os itens ao centro - mesmo alinhamento (centralizado) */
+    padding: 24px;  /* Para os itens descerem um pouco do topo da página ("desencostar do teto") - neste caso ele está dando um padding de todos os lados. Se quiser dar um padding só em cima, por exemplo, dá pra usar "24px 0px" (0px para os lados) */
+}
+
+.cabecalho-imagem {
+    height: 72px;   /* Define altura máxima da imagem, a largura já ajusta junto */
+}
+
+.cabecalho-menu {   /* Os elementos-filhos podem ser pais (o menu é uma tag-pai para as âncoras) */
+    display: flex;
+    gap: 32px;  /* Coloca a distância entre os elementos que estão dentro da tag-pai */
+}
+
+.cabecalho-menu-item {
+    font-family: 'Sarala', sans-serif; /* Copiado do Figma e do Google Fonts*/
+    color: #FFF2E7; /* Copiado do Figma - cor da fonte */
+    font-weight: 400;  /* Copiado do Figma -  grau de negrito */
+    font-size: 18px;    /* Copiado do Figma - tamanho da fonte */
+}
+
+.conteudo {
+    border-top: 0.4px solid  #FFF2E7;    /* Copiado do Figma - linha de topo para demarcar o início do main/conteúdo - espessura/tipo/cor*/
+    margin-bottom: 48px;    /* Margem para o fim do conteúdo - espaçamento entre o fim main e o início do footer */
+}
+
+.conteudo-principal {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.conteudo-principal-texto {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.conteudo-principal-texto-titulo {
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 64px;
+    color: #FFF2E7;
+}
+
+.conteudo-principal-texto-subtitulo {
+    font-family: 'Sarala', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ECD6C4;
+}
+
+.conteudo-principal-texto-botao {
+    background-color: #ECD6C4;  /* Copiado do Figma - cor de fundo do botão */
+    width: 180px;   /* Copiado do Figma -  tamanho (largura) do botão */
+    height: 60px;   /* Copiado do Figma -  tamanho (altura) do botão */
+    border: none;   /* Tira a borda que já vem pré-definida */
+    box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);    /* Copiado do Figma -  sombra do botão - tamanho/cor*/
+    border-radius: 20px;    /* Copiado do Figma -  borda arredondada */
+    font-family: 'Sarala', sans-serif;
+    color: #2F2325;
+    font-weight: 400;
+    font-size: 24px;
+}
+
+.conteudo-principal-texto-botao:hover { /* Usando uma pseudo-classe para estilizar quando o mouse passar por cima do botão */
+    background-color: rgba(236, 214, 196, 0.53);
+}   
+
+.conteudo-principal-imagem {
+    height: 430px;
+}
+
+.conteudo-secundario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Para elementos em coluna, o align-items serve para alinhá-los ao centro da página */
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.conteudo-secundario-titulo {
+    border-top: 0.4px solid #FFF2E7;
+    padding-top: 48px;  /* Dá um espaçamento entre a linha e o título */
+    font-family: 'Righteous', cursive;
+    font-weight: 400;
+    font-size: 24px;
+    color: #FFF2E7;
+    margin-bottom: 16px;
+}
+
+.conteudo-secundario-paragrafo {
+    font-family: 'Sarala', sans-serif;
+    color: #ECD6C4;
+    font-weight: 400;   /* Diferente do Figma pois já estamos usando a tag strong no HTML para destacar as palavras que queremos destacar */
+    font-size: 18px;
+}
+
+.rodape {
+    border-top: 0.4px solid #FFF2E7;
+    padding: 32px;
+}
+
+.rodape-imagem {
+    height: 48px; 
+    display: block; /* Diferentemente do flexbox, colocará em bloco (utilizará todo o espaço que tem dentro do elemento) */
+    margin: 0 auto; /* Irá automaticamente colocar para os lados, no final das contas acaba centralizando o elemento */
+}
